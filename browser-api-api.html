@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+=> bindmethod , apply method , call method , arguments 
+
+********************** browser api ***********************
+1: setTimeout() => function trigger wehen time is up
+2: setInterval() => function trigger for every time interval
+3: 1000 milli second = 1 second
+
+
+<script>
+
+    // function handler(){
+    //     let x = prompt("Enter your mobile no");
+    //     alert(x);
+    // }
+    // setTimeout(handler, 5000);
+
+    //**************** clear timeout *****************
+
+    // let clear = setTimeout(handler , 5000);
+    // let x = prompt("do you want stop timeout ? ");
+    // if(x == 'yes'){
+    //     clearTimeout(clear);
+    // }
+
+    // function handler(){
+    //     alert("timeout called");    
+    // }
+     
+    //****************** setInterval *****************
+    // let x = 1;
+    // function tictic(){
+    //     console.log(++x);
+    // }
+    // setInterval(tictic,1000);
+
+    //****************** clearInterval *****************
+        let x = 0;
+        setTimeout(stopTimer , 10000);
+        function tictic(){
+            console.log(++x);
+        }
+        let clear = setInterval(tictic ,1000);
+        function stopTimer(){
+            clearInterval(clear);
+        }
+        
+
+
+
+ 
+
+
+</script>
+
+
+</body>
+</html>

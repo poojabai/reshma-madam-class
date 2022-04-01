@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    *************** nested function *****************
+    function within function called nested function
+    
+    <script>
+        // function employee(){
+            
+        //     function student(){
+        //         alert("nested function");
+        //         function teacher(){
+        //             alert("i am teacher");
+        //         }
+        //         teacher();
+        //     }
+        //     student();
+            
+        // }
+        // employee();
+        //****************** use function expression and arrow function in nested function **************
+
+        // function teacher(){
+        //     let student = function(){
+        //         alert("i am student");
+        //     };
+        //     let parent = () =>{
+        //         alert("i am parent");
+        //     };
+        //     student();
+        //     parent();
+        // }
+        // teacher();
+
+        let x = prompt("Enter any value");
+        x = Number(x);
+
+        function printData(num){
+            let fn = null;
+            if( num % 2 == 0){
+                fn = () =>{
+                    alert(num * num);
+                };
+            }else{
+                fn = function(){
+                    alert(num * num * num);
+                };
+            }
+            fn();
+        }
+        printData(x);
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

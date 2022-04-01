@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        ************* Higher Order Function ************************
+        defination : any function can get argument as function or return function as value that is 
+        called higher order function;
+        <script>
+            //********** function as parameter ************
+            // function simple(num){
+            //     alert(num * num);
+            // }
+            // function higherOrder(fn){
+            //     fn(10);
+            // }
+            // higherOrder(simple);
+
+            // function  return value as other function
+
+            // function higherOrder(){
+            //     function simple(num){
+            //         alert(num * num);
+            //     }
+            //     return simple;
+            // }
+            // let fn = higherOrder();
+            // fn(5);
+
+            //*********** create filter function using higher order function *******
+                
+            const data = [12,52,63,41,20,35,87,10,25,39,75,21,22];
+            function filter(num){
+                return (num % 2 == 0);
+            }
+            function higherOrder(data , filterFn){
+                for(let num of data){
+                    if(filterFn(num)){
+                        console.log(num);
+                    }
+                }
+            }
+            higherOrder(data,filter);
+
+
+
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>
+
+
